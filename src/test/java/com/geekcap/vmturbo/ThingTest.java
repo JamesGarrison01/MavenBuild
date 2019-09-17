@@ -10,6 +10,8 @@ public class ThingTest {
 
     @Test
     public void testN() {
+        int i = 0;
+        i++;
         Thing t = new Thing();
         t.setN(5);
         Assert.assertEquals("N should be 5", 5, t.getN());
