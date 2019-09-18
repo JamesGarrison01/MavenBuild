@@ -23,4 +23,6 @@ stage ('Archive Artifacts'){
 stage ('Deployment'){
 	//sh 'cp target/*.war /opt/tomcat8/webapps'
 }
+	stage('Notification'){
+		slackSend color: 'good', message: 'Success'
 }
