@@ -25,5 +25,9 @@ node('master') {
 	}
 	stage('Notification'){
 		slackSend color: 'good', message: 'Success'
+		emailext body: 'A Test EMail', 
+			recipientProviders: [[$class: 'DevelopersRecipientProvider'], 
+					     [$class: 'RequesterRecipientProvider']], 
+			subject: 'Successfull', to: 'abc'
 	}
 }
