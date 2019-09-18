@@ -25,4 +25,5 @@ node('master') {
 	}
 	stage('Notification'){
 		slackSend color: 'good', message: 'Success'
+	}
 }
